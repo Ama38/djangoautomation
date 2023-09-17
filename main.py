@@ -49,7 +49,7 @@ if args.createproject == "createproject":
         content = pattern.sub(new, content)
         pattern = re.compile(r'\[\n', re.DOTALL)
         new = ''
-        new += f"\tpath('', include('{app_name}')),\n"
+        new += f"\tpath('', include('{app_name}.urls')),\n"
         content = content.replace(']', new + ']')
 
     with open(urls_by_path, 'w') as file:
