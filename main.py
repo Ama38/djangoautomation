@@ -32,7 +32,7 @@ if args.createproject == "createproject":
     os.makedirs(os.path.join(app_name, 'templates', app_name), exist_ok=True)
     print("App is created")
     urls_file_content = ("from django.urls import path\n"
-                        f"from {app_name}.urls import *\n"
+                        f"from {app_name}.views import *\n"
                         f"from {app_name}.models import *\n"
                         f"urlpatterns = [\n\n"
                         f"]")
